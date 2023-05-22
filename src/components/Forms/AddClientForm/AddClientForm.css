@@ -1,0 +1,96 @@
+.modal_full_width > img:first-of-type{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+.modal_full_width h1{
+    text-align: left;
+}
+.modal_full_width > div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+.modal_full_width form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.calendar{
+    position: absolute;
+    top: 36px;
+    left: 15px;
+}
+.modal_full_width button{
+    width: 100px;
+}
+.modal_full_width .red_el{
+    width: 100%;
+}
+.modal_full_width label{
+    font-weight: 600;
+    color: #313131;
+}
+.modal_full_width label:first-of-type{
+    position: relative;
+}
+.full_name{
+    display: flex;
+    gap: 20px;
+}
+.phone_type{
+    display: flex;
+}
+.PhoneInput{
+    width: 100%;
+}
+.PhoneInput input{
+    border-radius: 0 4px 4px 0;
+}
+.PhoneInputCountry{
+    display: none;
+}
+.modal_full_width > div:last-of-type{
+    position: relative;
+}
+.modal_full_width > div:last-of-type .red_el{
+    width: 120px;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    gap: 7px;
+    top: 0;
+    right: 0;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+@media screen and (min-width: 320px) and (max-width: 620px){
+    .modal_full_width h1{
+        text-align: center;
+    }
+    .modal_full_width > div:first-of-type{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+    .modal_full_width .user_img{
+        align-self: center;
+        width: 149px;
+    }
+    .modal_full_width .full_name{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .modal_full_width > div:last-of-type{
+        display: flex;
+        justify-content: space-between;
+    }
+    .modal_full_width button{
+        width: 125px;
+    }
+}

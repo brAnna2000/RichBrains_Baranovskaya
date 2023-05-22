@@ -1,0 +1,40 @@
+.clientCard{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 323px;
+    background-color: var(--white);
+    padding: 30px 20px 30px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.client_edit{
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 17px;
+    visibility: hidden;
+}
+.clientCard:hover{
+    background-color: #F8F9FF;
+}
+.clientCard:hover .client_edit{
+    visibility: visible;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+    font-size: 16px;
+}
+li{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}

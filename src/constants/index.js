@@ -1,0 +1,28 @@
+export const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+export const LOG_IN = "LOG_IN";
+export const LOG_OUT = "LOG_OUT";
+
+export const OPEN_AUTH_FORM = "OPEN_AUTH_FORM";
+export const CLOSE_AUTH_FORM = "CLOSE_AUTH_FORM";
+
+export const SET_CLIENTS_LIST = "SET_CLIENTS_LIST";
+
+export const GET_CLIENT = "GET_CLIENT";
+
+export const OPEN_ADD_CLIENT_FORM = "OPEN_ADD_CLIENT_FORM";
+export const CLOSE_ADD_CLIENT_FORM = "CLOSE_ADD_CLIENT_FORM";
+
+export const OPEN_EDIT_CLIENT_FORM = "OPEN_EDIT_CLIENT_FORM";
+export const CLOSE_EDIT_CLIENT_FORM = "CLOSE_EDIT_CLIENT_FORM";
+
+export const OPEN_DELETE_CLIENT_FORM = "OPEN_DELETE_CLIENT_FORM";
+export const CLOSE_DELETE_CLIENT_FORM = "CLOSE_DELETE_CLIENT_FORM";
+
+export const OPEN_CLIENT_INFO_FORM = "OPEN_CLIENT_INFO_FORM";
+export const CLOSE_CLIENT_INFO_FORM = "CLOSE_CLIENT_INFO_FORM";
+
+export const SHOW_NOTIFICATION = "SHOW_NOTIFICATION";
+export const HIDE_NOTIFICATION = "HIDE_NOTIFICATION";
+
+export const SET_SEARCH_RESULT = "SET_SEARCH_RESULT";

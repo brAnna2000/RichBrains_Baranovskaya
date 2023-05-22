@@ -1,0 +1,27 @@
+.MuiScopedCssBaseline-root{
+    margin-top: 7px;
+}
+.Mui-focused{
+    border-color: transparent;
+}
+.MuiDateField-root{
+    height: 40px;
+}
+.MuiFormControl-root{
+    width: 100%;
+}
+.MuiScopedCssBaseline-root .css-1xhypcz-MuiStack-root{
+    padding-top: 0px;
+}
+.MuiFormControl-root .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+    border-color: var(--grey);
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 10px 0 10px 42px;
+    height: 40px;
+    box-sizing: inherit;
+    margin-top: 0;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border: 1px solid rgba(38, 38, 38, 0.12);
+}

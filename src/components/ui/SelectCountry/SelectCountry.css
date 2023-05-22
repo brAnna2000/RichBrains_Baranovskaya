@@ -1,0 +1,10 @@
+.css-b62m3t-container .css-13cymwt-control, .css-b62m3t-container .css-13cymwt-control:hover{
+    border-color: var(--grey);
+    font-weight: normal;
+}
+form .css-b62m3t-container .css-qbdosj-Input input{
+    height: 100%;
+}
+.css-1hb7zxy-IndicatorsContainer .css-1u9des2-indicatorSeparator{
+    width: 0;
+}

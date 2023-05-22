@@ -1,0 +1,12 @@
+.clientsTable{
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 285px));
+    gap: 20px;
+    justify-content: space-between;
+}
+@media screen and (max-width: 680px){
+    .clientsTable{
+        justify-content: center;
+    }
+}

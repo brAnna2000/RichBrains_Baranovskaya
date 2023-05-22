@@ -1,0 +1,56 @@
+/* .shadow > form{
+    position: relative;
+    width: 450px;
+    height: 422px;
+    padding: 60px 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: var(--white);
+} */
+.modal_small form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+.modal_small .authorization, .modal_small .delete_form{
+    text-align: center;
+}
+.modal_small > img:first-of-type{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+.modal_small form h1{
+    margin-bottom: 20px;
+}
+.modal_small form p{
+    margin-bottom: 20px;
+}
+.modal_small label{
+    position: relative;
+}
+.modal_small label img{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 620px){
+    .modal_small form{
+        justify-content: center;
+        text-align: center;
+        width: 260px;
+        gap: 20px;
+    }
+    .modal_small form h1{
+        margin-bottom: 10px;
+    }
+    .modal_small form p{
+        margin-bottom: 10px;
+    }
+}

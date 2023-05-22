@@ -1,0 +1,24 @@
+.info_form{
+    align-items: center;
+}
+.client_options{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.client_options span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+@media screen and (min-width: 320px) and (max-width: 620px){
+    .client_options{
+       flex-direction: column;
+       gap: 30px;
+       margin-bottom: 30px;
+    }
+    .client_options ~ button{
+        margin-top: 10px;
+    }
+}

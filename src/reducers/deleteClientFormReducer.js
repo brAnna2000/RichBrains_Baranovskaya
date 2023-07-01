@@ -14,3 +14,6 @@ export const deleteClientFormReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const openDeleteClientFormAction = (clientId) => ({type: OPEN_DELETE_CLIENT_FORM, clientId});
+export const closeDeleteClientFormAction = () => ({type: CLOSE_DELETE_CLIENT_FORM});

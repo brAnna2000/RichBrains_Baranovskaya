@@ -1,6 +1,8 @@
 import { avatar, map, phone, calendar, edit, trashBlack } from '../../assets/img';
 
-import { OPEN_EDIT_CLIENT_FORM, OPEN_DELETE_CLIENT_FORM, OPEN_CLIENT_INFO_FORM } from '../../constants';
+import { openInfoClientFormAction } from '../../reducers/infoClientFormReducer';
+import { openDeleteClientFormAction } from '../../reducers/deleteClientFormReducer';
+import { openEditClientFormAction } from '../../reducers/editClientFormReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
@@ -12,17 +14,17 @@ function ClientCard({data}) {
   
   const editForm = (e) => {
     e.stopPropagation();
-    dispatch({type: OPEN_EDIT_CLIENT_FORM, clientData: data});
+    dispatch(openEditClientFormAction(data));
   }
   const deleteForm = (e) => {
     e.stopPropagation();
-    dispatch({type: OPEN_DELETE_CLIENT_FORM, clientId: data.id});
+    dispatch(openDeleteClientFormAction(data.id));
   }
   const openClientInfoForm = () => {
     axios.post('http://localhost:3333/clients/get', {id: data.id}, {headers: { Authorization: authorized }})
       .then(function (response){
         console.log(response);
-        dispatch({type: OPEN_CLIENT_INFO_FORM, clientData: response.data.client});
+        dispatch(openInfoClientFormAction(response.data.client));
       })
       .catch((error) => console.log(error));
   }

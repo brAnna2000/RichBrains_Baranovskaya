@@ -3,7 +3,7 @@ import { search } from '../../../assets/img';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 
-import { SET_SEARCH_RESULT } from '../../../constants';
+import { setSearchResultAction } from '../../../reducers/searchResultReducer';
 
 function SearchClients() {
   const [searchValue, setSearchValue] = useState('');
@@ -16,10 +16,10 @@ function SearchClients() {
         const filter = clientsList.filter(client => {
           return client.name.toLowerCase().includes(searchData) || client.surname.toLowerCase().includes(searchData) && client;
         });
-        dispatch({type: SET_SEARCH_RESULT, searchResult: filter});
+        dispatch(setSearchResultAction(filter));
         
     }else{
-        dispatch({type: SET_SEARCH_RESULT, searchResult: []});
+        dispatch(setSearchResultAction([]));
     }
   }, [searchValue]);
 

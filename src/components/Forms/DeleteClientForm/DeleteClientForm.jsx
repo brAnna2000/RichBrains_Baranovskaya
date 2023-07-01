@@ -1,7 +1,9 @@
 import { closeBlack } from '../../../assets/img';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { SHOW_NOTIFICATION, CLOSE_DELETE_CLIENT_FORM, SET_CLIENTS_LIST } from '../../../constants';
+import { setClientsListAction } from '../../../reducers/clientsListReducer';
+import { showNotificationAction } from '../../../reducers/notificationReducer';
+import { CLOSE_DELETE_CLIENT_FORM } from '../../../constants';
 import axios from 'axios';
 
 import './DeleteClientForm.css';
@@ -21,11 +23,11 @@ function DeleteClientForm() {
         const updatedClientsData = clientsList.slice(0);
         findUser(updatedClientsData);
 
-        dispatch({type: SET_CLIENTS_LIST, clientsListData: updatedClientsData});
+        dispatch(setClientsListAction(updatedClientsData));
         dispatch({type: CLOSE_DELETE_CLIENT_FORM})
-        dispatch({type: SHOW_NOTIFICATION, notification:{type: "success", message: "Client was deleted successfully"}});
+        dispatch(showNotificationAction({type: "success", message: "Client was deleted successfully"}));
     })
-    .catch(() => dispatch({type: SHOW_NOTIFICATION, notification:{type: "warning", message: "Something went wrong!"}}));
+    .catch(() => dispatch(showNotificationAction({type: "warning", message: "Something went wrong!"})));
   }
 
   const findUser = (updatedClientsData) => {

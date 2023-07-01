@@ -1,7 +1,7 @@
 import { plus } from '../../../assets/img';
 
 import { useDispatch } from 'react-redux';
-import { OPEN_ADD_CLIENT_FORM } from '../../../constants';
+import { openAddClientFormAction } from '../../../reducers/addClientFormReducer';
 
 import './AddClientButton.css';
 
@@ -9,7 +9,7 @@ function AddClientButton() {
     const dispatch = useDispatch();
 
     const openClientForm = () => {
-        dispatch({type: OPEN_ADD_CLIENT_FORM});
+        dispatch(openAddClientFormAction());
     }
     return (
         <button className='addClientButton' onClick={() => openClientForm()}>

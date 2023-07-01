@@ -1,6 +1,6 @@
 import ClientCard from '../ClientCard/ClientCard';
 
-import { SET_CLIENTS_LIST } from '../../constants';
+import { setClientsListAction } from '../../reducers/clientsListReducer';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { useEffect } from 'react';
@@ -14,7 +14,7 @@ function ClientsTable() {
 
   useEffect(() => {
     axios.get('http://localhost:3333/clients')
-      .then((response) =>  dispatch({type: SET_CLIENTS_LIST, clientsListData: response.data.clients}))
+      .then((response) =>  dispatch(setClientsListAction(response.data.clients)))
       .catch((error) => console.log(error));
   },[]);
   const cardsList = [];

@@ -12,3 +12,5 @@ export const getClientReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const getClientAction = (clientData) => ({type: GET_CLIENT, clientData});

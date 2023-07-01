@@ -14,3 +14,6 @@ export const infoClientFormReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const openInfoClientFormAction = (clientData) => ({type: OPEN_CLIENT_INFO_FORM, clientData});
+export const closeInfoClientFormAction = () => ({type: CLOSE_CLIENT_INFO_FORM});

@@ -15,3 +15,6 @@ export const loginReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const logInAction = (token) => ({type: LOG_IN, token});
+export const logOutAction = () => ({type: LOG_OUT});

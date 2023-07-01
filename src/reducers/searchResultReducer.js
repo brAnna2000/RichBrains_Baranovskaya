@@ -12,3 +12,5 @@ export const searchResultReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const setSearchResultAction = (searchResult) => ({type: SET_SEARCH_RESULT, searchResult});

@@ -12,3 +12,5 @@ export const clientsListReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const setClientsListAction = (clientsListData) => ({type: SET_CLIENTS_LIST, clientsListData});

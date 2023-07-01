@@ -1,6 +1,7 @@
 import { logInIcon, userIcon, arrowDownBlack } from '../../assets/img';
 import { useSelector, useDispatch } from 'react-redux';
-import { isMobile, OPEN_AUTH_FORM } from '../../constants';
+import { isMobile } from '../../constants';
+import { openAuthorizationFormAction } from '../../reducers/authorizationFormReducer';
 import './Header.css';
 
 function Header() {
@@ -9,7 +10,7 @@ function Header() {
   const userName = useSelector(state => state.userName);
 
   const authorize = () => {
-    dispatch({type: OPEN_AUTH_FORM});
+    dispatch(openAuthorizationFormAction());
   }
   return (
     <header>

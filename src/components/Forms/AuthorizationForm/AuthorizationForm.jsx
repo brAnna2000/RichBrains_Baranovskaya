@@ -2,7 +2,9 @@ import { show, closeBlack } from '../../../assets/img';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { SHOW_NOTIFICATION, LOG_IN, LOG_OUT, CLOSE_AUTH_FORM } from '../../../constants';
+import { showNotificationAction } from '../../../reducers/notificationReducer';
+import { logInAction, logOutAction } from '../../../reducers/loginReducer';
+import { closeAuthorizationFormAction } from '../../../reducers/authorizationFormReducer';
 
 import axios from 'axios';
 import './AuthorizationForm.css';
@@ -20,19 +22,19 @@ function AuthorizationForm() {
       axios.post('http://localhost:3333/user/login', userData)
       .then(function (response){
         console.log(response);
-        dispatch({type: LOG_IN, token: response.data.token});
-        dispatch({type: CLOSE_AUTH_FORM});
-        dispatch({type: SHOW_NOTIFICATION, notification:{type: "success", message: "Successful authorization"}});
+        dispatch(logInAction(response.data.token));
+        dispatch(closeAuthorizationFormAction());
+        dispatch(showNotificationAction({type: "success", message: "Successful authorization"}));
       })
-      .catch(() => dispatch({type: SHOW_NOTIFICATION, notification:{type: "warning", message: "Something went wrong!"}}));
+      .catch(() => dispatch(showNotificationAction({type: "warning", message: "Something went wrong!"})));
     }else{
       console.log('hi');
-      dispatch({type: LOG_OUT});
-      dispatch({type: CLOSE_AUTH_FORM});
+      dispatch(logOutAction());
+      dispatch(closeAuthorizationFormAction());
     }
   }
   const closeForm = () => {
-    dispatch({type: CLOSE_AUTH_FORM});
+    dispatch(closeAuthorizationFormAction());
   }
   return (
     <form className='authorization'>

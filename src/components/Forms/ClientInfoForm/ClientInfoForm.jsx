@@ -1,7 +1,10 @@
 import { avatar, calendar, closeBlack, edit, map, trashRed, phone } from '../../../assets/img';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { OPEN_DELETE_CLIENT_FORM, OPEN_EDIT_CLIENT_FORM, CLOSE_CLIENT_INFO_FORM } from '../../../constants';
+import { OPEN_EDIT_CLIENT_FORM } from '../../../constants';
+
+import { openDeleteClientFormAction } from '../../../reducers/deleteClientFormReducer';
+import { closeInfoClientFormAction } from '../../../reducers/infoClientFormReducer';
 
 import './ClientInfoForm.css';
 
@@ -10,17 +13,17 @@ function ClientInfoForm() {
   const clientInfo = useSelector(state => state.clientInfo.openClientInfoForm);
 
   const closeForm = () => {
-    dispatch({type: CLOSE_CLIENT_INFO_FORM});
+    dispatch(closeInfoClientFormAction());
   }
 
   const openEditClientForm = () => {
-    dispatch({type: CLOSE_CLIENT_INFO_FORM});
+    dispatch(closeInfoClientFormAction());
     dispatch({type: OPEN_EDIT_CLIENT_FORM, clientData: clientInfo});
   }
 
   const openDeleteClientForm = () => {
-    dispatch({type: CLOSE_CLIENT_INFO_FORM});
-    dispatch({type: OPEN_DELETE_CLIENT_FORM, clientId: clientInfo.id});
+    dispatch(closeInfoClientFormAction());
+    dispatch(openDeleteClientFormAction(clientInfo.id));
   }
   return (
     <form className='info_form'>

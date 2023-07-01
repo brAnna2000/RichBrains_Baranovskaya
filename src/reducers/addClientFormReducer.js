@@ -14,3 +14,6 @@ export const addClientFormReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const openAddClientFormAction = () => ({type: OPEN_ADD_CLIENT_FORM});
+export const closeAddClientFormAction = () => ({type: CLOSE_ADD_CLIENT_FORM});

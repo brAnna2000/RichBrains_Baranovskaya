@@ -14,3 +14,6 @@ export const authorizationFormReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const openAuthorizationFormAction = () => ({type: OPEN_AUTH_FORM});
+export const closeAuthorizationFormAction = () => ({type: CLOSE_AUTH_FORM});

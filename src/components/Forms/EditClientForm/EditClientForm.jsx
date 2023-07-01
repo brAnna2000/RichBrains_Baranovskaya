@@ -1,6 +1,10 @@
 import { avatar, closeBlack, calendar, trashRed } from '../../../assets/img';
 
-import { CLOSE_EDIT_CLIENT_FORM, SHOW_NOTIFICATION, SET_CLIENTS_LIST, OPEN_DELETE_CLIENT_FORM } from '../../../constants';
+import { CLOSE_EDIT_CLIENT_FORM } from '../../../constants';
+import { showNotificationAction } from '../../../reducers/notificationReducer';
+import { openDeleteClientFormAction } from '../../../reducers/deleteClientFormReducer';
+import { closeEditClientFormAction } from '../../../reducers/editClientFormReducer';
+import { setClientsListAction } from '../../../reducers/clientsListReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import axios from 'axios';
@@ -32,13 +36,13 @@ function EditClientForm() {
             console.log(response);
             const updatedClientsDataEdit = clientsList.slice(0);
             updateUser(updatedClientsDataEdit);
-            dispatch({type: SET_CLIENTS_LIST, clientsListData: updatedClientsDataEdit});
-            dispatch({type: CLOSE_EDIT_CLIENT_FORM});
-            dispatch({type: SHOW_NOTIFICATION, notification:{type: "success", message: "New client was added successfully"}});
+            dispatch(setClientsListAction(updatedClientsDataEdit));
+            dispatch(closeEditClientFormAction());
+            dispatch(showNotificationAction({type: "success", message: "New client was added successfully"}));
         })
         .catch((error) => console.log(error));
         }else{
-            dispatch({type: SHOW_NOTIFICATION, notification:{type: "warning", message: "Please fill the form!"}});
+            dispatch(showNotificationAction({type: "warning", message: "Please fill the form!"}));
         }
     }
 
@@ -66,7 +70,7 @@ function EditClientForm() {
 
     const openDeleteClientForm = () => {
         dispatch({type: CLOSE_EDIT_CLIENT_FORM});
-        dispatch({type: OPEN_DELETE_CLIENT_FORM, clientId: editClientData.id});
+        dispatch(openDeleteClientFormAction(editClientData.id));
     }
     return (
         <>

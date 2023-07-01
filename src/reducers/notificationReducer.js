@@ -14,3 +14,6 @@ export const notificationReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const showNotificationAction = (notification) => ({type: SHOW_NOTIFICATION, notification});
+export const hideNotificationAction = () => ({type: HIDE_NOTIFICATION});

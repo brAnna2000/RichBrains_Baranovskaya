@@ -1,8 +1,10 @@
 import { avatar, closeBlack, calendar } from '../../../assets/img';
 
-import { CLOSE_ADD_CLIENT_FORM, SHOW_NOTIFICATION, SET_CLIENTS_LIST } from '../../../constants';
+import { showNotificationAction } from '../../../reducers/notificationReducer';
+import { closeAddClientFormAction } from '../../../reducers/addClientFormReducer';
+import { setClientsListAction } from '../../../reducers/clientsListReducer';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 import SelectBirthDay from '../../ui/SelectBirthDay/SelectBirthDay';
@@ -33,13 +35,13 @@ function AddClientForm() {
           const updatedClientsData = clientsList.slice(0);
           updatedClientsData.push(response.data.client);
 
-          dispatch({type: SET_CLIENTS_LIST, clientsListData: updatedClientsData});
-          dispatch({type: CLOSE_ADD_CLIENT_FORM});
-          dispatch({type: SHOW_NOTIFICATION, notification:{type: "success", message: "New client was added successfully"}});
+          dispatch(setClientsListAction(updatedClientsData));
+          dispatch(closeAddClientFormAction());
+          dispatch(showNotificationAction({type: "success", message: "New client was added successfully"}));
         })
         .catch((error) => console.log(error));
       }else{
-        dispatch({type: SHOW_NOTIFICATION, notification:{type: "warning", message: "Please fill the form!"}});
+        dispatch(showNotificationAction({type: "warning", message: "Please fill the form!"}));
       }
     }
 
@@ -53,7 +55,7 @@ function AddClientForm() {
     }
 
     const closeForm = () => {
-      dispatch({type: CLOSE_ADD_CLIENT_FORM});
+      dispatch(closeAddClientFormAction());
     }
     return (
         <>

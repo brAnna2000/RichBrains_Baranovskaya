@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useState, useEffect } from 'react';
-import { SET_CLIENTS_LIST } from "../../../constants";
+import { setClientsListAction } from "../../../reducers/clientsListReducer";
 import { useDispatch, useSelector } from 'react-redux';
 import { sort, topBlue, down } from "../../../assets/img";
 
@@ -22,7 +22,7 @@ function SortClients() {
 
     useEffect(() => {
         let option = optionsList.find(option => option.name === defaultSelectText).id;
-        dispatch({type: SET_CLIENTS_LIST, clientsListData: clientsData.sort(byField(option))})
+        dispatch(setClientsListAction(clientsData.sort(byField(option))))
     },[defaultSelectText, direction]);
 
     const handleListDisplay = () => {

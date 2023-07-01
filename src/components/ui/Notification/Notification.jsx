@@ -1,6 +1,6 @@
 import { alertCircle, check, closeWhite } from '../../../assets/img/index';
 
-import { HIDE_NOTIFICATION } from '../../../constants';
+import { hideNotificationAction } from '../../../reducers/notificationReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -11,7 +11,7 @@ function Notification() {
     const showNotification = useSelector(state => state.notification.showNotification);
 
     const closeNotification = () => {
-        dispatch({type: HIDE_NOTIFICATION});
+        dispatch(hideNotificationAction());
     }
     useEffect(() => {
         const timer = setTimeout(() => {

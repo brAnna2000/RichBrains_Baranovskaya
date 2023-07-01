@@ -14,3 +14,6 @@ export const editClientFormReducer = (state = defaultState, action) => {
       return state;
   }
 }
+
+export const openEditClientFormAction = (clientData) => ({type: OPEN_EDIT_CLIENT_FORM, clientData});
+export const closeEditClientFormAction = () => ({type: CLOSE_EDIT_CLIENT_FORM});

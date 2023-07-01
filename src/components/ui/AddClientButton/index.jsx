@@ -3,7 +3,7 @@ import { plus } from '../../../assets/img';
 import { useDispatch } from 'react-redux';
 import { openAddClientFormAction } from '../../../reducers/addClientFormReducer';
 
-import './AddClientButton.css';
+import './index.css';
 
 function AddClientButton() {
     const dispatch = useDispatch();

@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import axios from 'axios';
 
-import SelectBirthDay from '../../ui/SelectBirthDay/SelectBirthDay';
-import CountrySelector from '../../ui/SelectCountry/SelectCountry';
-import Phone from '../../ui/PhoneInput/PhoneInput';
+import SelectBirthDay from '../../ui/SelectBirthDay';
+import CountrySelector from '../../ui/SelectCountry';
+import Phone from '../../ui/PhoneInput';
 
-import './AddClientForm.css';
+import './index.css';
 
 function AddClientForm() {
     const authorized = useSelector(state => state.login.authorized);

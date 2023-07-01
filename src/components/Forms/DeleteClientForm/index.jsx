@@ -6,7 +6,7 @@ import { showNotificationAction } from '../../../reducers/notificationReducer';
 import { CLOSE_DELETE_CLIENT_FORM } from '../../../constants';
 import axios from 'axios';
 
-import './DeleteClientForm.css';
+import './index.css';
 
 function DeleteClientForm() {
   const dispatch = useDispatch();

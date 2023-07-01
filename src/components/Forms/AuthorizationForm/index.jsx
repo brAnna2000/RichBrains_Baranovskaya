@@ -7,7 +7,7 @@ import { logInAction, logOutAction } from '../../../reducers/loginReducer';
 import { closeAuthorizationFormAction } from '../../../reducers/authorizationFormReducer';
 
 import axios from 'axios';
-import './AuthorizationForm.css';
+import './index.css';
 
 function AuthorizationForm() {
   const [userData, setUserData] = useState({login: 'richbrains', password: 'richbrains_test'});

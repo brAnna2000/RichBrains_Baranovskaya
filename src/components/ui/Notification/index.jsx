@@ -4,7 +4,7 @@ import { hideNotificationAction } from '../../../reducers/notificationReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import './Notification.css';
+import './index.css';
 
 function Notification() {
     const dispatch = useDispatch();

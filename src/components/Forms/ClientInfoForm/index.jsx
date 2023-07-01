@@ -6,7 +6,7 @@ import { OPEN_EDIT_CLIENT_FORM } from '../../../constants';
 import { openDeleteClientFormAction } from '../../../reducers/deleteClientFormReducer';
 import { closeInfoClientFormAction } from '../../../reducers/infoClientFormReducer';
 
-import './ClientInfoForm.css';
+import './index.css';
 
 function ClientInfoForm() {
   const dispatch = useDispatch();

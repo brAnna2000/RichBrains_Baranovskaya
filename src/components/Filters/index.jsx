@@ -1,7 +1,7 @@
-import SortClients from '../ui/SortClients/SortClients';
-import SearchClients from '../ui/SearchClients/SearchClients';
+import SortClients from '../ui/SortClients';
+import SearchClients from '../ui/SearchClients';
 
-import './Filters.css';
+import './index.css';
 
 function Filters(){
   return (

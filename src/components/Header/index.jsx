@@ -2,7 +2,7 @@ import { logInIcon, userIcon, arrowDownBlack } from '../../assets/img';
 import { useSelector, useDispatch } from 'react-redux';
 import { isMobile } from '../../constants';
 import { openAuthorizationFormAction } from '../../reducers/authorizationFormReducer';
-import './Header.css';
+import './index.css';
 
 function Header() {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
 
-import './SelectCountry.css';
+import './index.css';
 
 function CountrySelector({clientValue, updateСountryValue}) {
     const [value, setValue] = useState('');

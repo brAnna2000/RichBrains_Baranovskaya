@@ -1,9 +1,9 @@
-import Header from './components/Header/Header';
-import Filters from './components/Filters/Filters';
-import AddClientButton from './components/ui/AddClientButton/AddClientButton';
-import ClientsTable from './components/ClientsTable/ClientsTable';
-import Modal from './components/Modal/Modal';
-import Notification from './components/ui/Notification/Notification';
+import Header from './components/Header';
+import Filters from './components/Filters';
+import AddClientButton from './components/ui/AddClientButton';
+import ClientsTable from './components/ClientsTable';
+import Modal from './components/Modal';
+import Notification from './components/ui/Notification';
 
 import { useSelector } from 'react-redux';
 

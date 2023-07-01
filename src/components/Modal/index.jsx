@@ -1,11 +1,11 @@
-import AuthorizationForm from '../Forms/AuthorizationForm/AuthorizationForm';
-import AddClientForm from '../Forms/AddClientForm/AddClientForm';
-import EditClientForm from '../Forms/EditClientForm/EditClientForm';
-import DeleteClientForm from '../Forms/DeleteClientForm/DeleteClientForm';
-import ClientInfoForm from '../Forms/ClientInfoForm/ClientInfoForm';
+import AuthorizationForm from '../Forms/AuthorizationForm';
+import AddClientForm from '../Forms/AddClientForm';
+import EditClientForm from '../Forms/EditClientForm';
+import DeleteClientForm from '../Forms/DeleteClientForm';
+import ClientInfoForm from '../Forms/ClientInfoForm';
 
 import { useSelector } from 'react-redux';
-import './Modal.css';
+import './index.css';
 
 function Modal() {
     const state = useSelector(state => state);

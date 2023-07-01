@@ -6,7 +6,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateField } from '@mui/x-date-pickers/DateField';
 import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 
-import './SelectBirthDay.css';
+import './index.css';
 
 function CustomDateFormat({clientValue, updateAgeValue}) {
   const [value, setValue] = React.useState(dayjs(clientValue ? clientValue.split('.').reverse().join('-') : '2000-06-19'));

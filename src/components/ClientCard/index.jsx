@@ -6,7 +6,7 @@ import { openEditClientFormAction } from '../../reducers/editClientFormReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
-import './ClientCard.css';
+import './index.css';
 
 function ClientCard({data}) {
   const dispatch = useDispatch();

@@ -5,7 +5,7 @@ import { setClientsListAction } from "../../../reducers/clientsListReducer";
 import { useDispatch, useSelector } from 'react-redux';
 import { sort, topBlue, down } from "../../../assets/img";
 
-import './SortClients.css';
+import './index.css';
 
 function SortClients() {
     const [defaultSelectText, setDefaultSelectText] = useState("Name");

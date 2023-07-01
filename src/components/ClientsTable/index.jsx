@@ -1,11 +1,11 @@
-import ClientCard from '../ClientCard/ClientCard';
+import ClientCard from '../ClientCard';
 
 import { setClientsListAction } from '../../reducers/clientsListReducer';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { useEffect } from 'react';
 import axios from 'axios';
-import './ClientsTable.css';
+import './index.css';
 
 function ClientsTable() {
   const dispatch = useDispatch();

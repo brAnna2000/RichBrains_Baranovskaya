@@ -8,7 +8,7 @@ import './Notification.css';
 
 function Notification() {
     const dispatch = useDispatch();
-    const showNotification = useSelector(state => state.showNotification);
+    const showNotification = useSelector(state => state.notification.showNotification);
 
     const closeNotification = () => {
         dispatch({type: HIDE_NOTIFICATION});

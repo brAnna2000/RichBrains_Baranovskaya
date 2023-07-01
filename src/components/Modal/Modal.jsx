@@ -12,22 +12,22 @@ function Modal() {
 
     return (
             <div className="shadow">
-                <div className={state.openAddClientForm || state.openEditClientForm ? 'modal_full_width' : 'modal_small'}>
-                    {state.openAuthForm &&
+                <div className={state.addClient.openAddClientForm || state.editClient.openEditClientForm ? 'modal_full_width' : 'modal_small'}>
+                    {state.authorization.openAuthForm &&
                         <AuthorizationForm/>
                     }
-                    {state.openAddClientForm &&
+                    {state.addClient.openAddClientForm &&
                         <AddClientForm/>  
                     }
-                    {state.openEditClientForm &&
+                    {state.editClient.openEditClientForm &&
                         <EditClientForm/>
                     }
-                    {state.openDeleteClientForm &&
+                    {state.deleteClient.openDeleteClientForm &&
                         <DeleteClientForm/>
                     }
-                    {state.openClientInfoForm &&
+                    {state.infoClient.openClientInfoForm &&
                         <ClientInfoForm/>
-                    }    
+                    }
                 </div>
             </div>
     );

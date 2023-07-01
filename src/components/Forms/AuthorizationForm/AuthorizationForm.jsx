@@ -12,7 +12,7 @@ function AuthorizationForm() {
   const [passwordType, setPasswordType] = useState('password');
 
   const dispatch = useDispatch();
-  const authorized = useSelector(state => state.authorized);
+  const authorized = useSelector(state => state.login.authorized);
 
   const signForm = (e) => {
     e.preventDefault();
@@ -21,11 +21,14 @@ function AuthorizationForm() {
       .then(function (response){
         console.log(response);
         dispatch({type: LOG_IN, token: response.data.token});
+        dispatch({type: CLOSE_AUTH_FORM});
         dispatch({type: SHOW_NOTIFICATION, notification:{type: "success", message: "Successful authorization"}});
       })
       .catch(() => dispatch({type: SHOW_NOTIFICATION, notification:{type: "warning", message: "Something went wrong!"}}));
     }else{
+      console.log('hi');
       dispatch({type: LOG_OUT});
+      dispatch({type: CLOSE_AUTH_FORM});
     }
   }
   const closeForm = () => {

@@ -8,7 +8,7 @@ import { SET_SEARCH_RESULT } from '../../../constants';
 function SearchClients() {
   const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
-  const clientsList = useSelector(state => state.clientsList);
+  const clientsList = useSelector(state => state.clientsList.clientsList);
 
   useEffect(() => {
     const searchData = searchValue.toLowerCase().trim();

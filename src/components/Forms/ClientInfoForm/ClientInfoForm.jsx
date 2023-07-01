@@ -7,7 +7,7 @@ import './ClientInfoForm.css';
 
 function ClientInfoForm() {
   const dispatch = useDispatch();
-  const clientInfo = useSelector(state => state.openClientInfoForm);
+  const clientInfo = useSelector(state => state.clientInfo.openClientInfoForm);
 
   const closeForm = () => {
     dispatch({type: CLOSE_CLIENT_INFO_FORM});

@@ -18,7 +18,7 @@ function SortClients() {
     ]);
 
     const dispatch = useDispatch();
-    const clientsData = useSelector(state => state.clientsList);
+    const clientsData = useSelector(state => state.clientsList.clientsList);
 
     useEffect(() => {
         let option = optionsList.find(option => option.name === defaultSelectText).id;

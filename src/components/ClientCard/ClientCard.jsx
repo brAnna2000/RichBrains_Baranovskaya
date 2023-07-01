@@ -8,7 +8,7 @@ import './ClientCard.css';
 
 function ClientCard({data}) {
   const dispatch = useDispatch();
-  const authorized = useSelector(state => state.authorized);
+  const authorized = useSelector(state => state.login.authorized);
   
   const editForm = (e) => {
     e.stopPropagation();

@@ -9,9 +9,9 @@ import './DeleteClientForm.css';
 function DeleteClientForm() {
   const dispatch = useDispatch();
 
-  const authorized = useSelector(state => state.authorized);
-  const clientId = useSelector(state => state.openDeleteClientForm);
-  const clientsList = useSelector(state => state.clientsList);
+  const authorized = useSelector(state => state.login.authorized);
+  const clientId = useSelector(state => state.deleteClient.openDeleteClientForm);
+  const clientsList = useSelector(state => state.clientsList.clientsList);
 
   const deleteClient = (e) => {
     e.preventDefault();

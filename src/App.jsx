@@ -12,10 +12,16 @@ import './App.css';
 function App() {
   const state = useSelector(state => state);
 
-  const showModal = state.openAuthForm || state.openAddClientForm || state.openEditClientForm || state.openDeleteClientForm || state.openClientInfoForm;
+  const showModal = [
+    state.authorization.openAuthForm, 
+    state.addClient.openAddClientForm, 
+    state.editClient.openEditClientForm,
+    state.deleteClient.openDeleteClientForm,
+    state.infoClient.openClientInfoForm
+  ].some(el => !!el);
   return (
     <div className="App">
-      {state.showNotification &&
+      {state.notification.showNotification &&
         <Notification/>
       }
       {showModal &&
@@ -23,7 +29,7 @@ function App() {
       }
       <Header/>
       <div className="container">
-        {state.authorized && 
+        {state.login.authorized && 
           <AddClientButton/>
         }
         <Filters/>

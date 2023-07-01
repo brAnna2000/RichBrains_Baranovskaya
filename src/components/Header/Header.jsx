@@ -5,7 +5,7 @@ import './Header.css';
 
 function Header() {
   const dispatch = useDispatch();
-  const authorized = useSelector(state => state.authorized);
+  const authorized = useSelector(state => state.login.authorized);
   const userName = useSelector(state => state.userName);
 
   const authorize = () => {

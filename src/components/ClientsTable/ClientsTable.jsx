@@ -9,8 +9,8 @@ import './ClientsTable.css';
 
 function ClientsTable() {
   const dispatch = useDispatch();
-  const clientsData = useSelector(state => state.clientsList);
-  const searchResult = useSelector(state => state.searchResult);
+  const clientsData = useSelector(state => state.clientsList.clientsList);
+  const searchResult = useSelector(state => state.searchResult.searchResult);
 
   useEffect(() => {
     axios.get('http://localhost:3333/clients')
@@ -33,7 +33,7 @@ function ClientsTable() {
     
   return (
     <div className="clientsTable">
-        {clientsData.length && cardsList}
+        {!!clientsData.length && cardsList}
     </div>
   );
 }

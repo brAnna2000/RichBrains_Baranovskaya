@@ -10,9 +10,9 @@ import CountrySelector from '../../ui/SelectCountry/SelectCountry';
 import Phone from '../../ui/PhoneInput/PhoneInput';
 
 function EditClientForm() {
-    const clientData = useSelector(state => state.openEditClientForm);
-    const clientsList = useSelector(state => state.clientsList);
-    const authorized = useSelector(state => state.authorized); 
+    const clientData = useSelector(state => state.editClient.openEditClientForm);
+    const clientsList = useSelector(state => state.clientsList.clientsList);
+    const authorized = useSelector(state => state.login.authorized); 
 
     const dispatch = useDispatch();
 

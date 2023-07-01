@@ -12,8 +12,8 @@ import Phone from '../../ui/PhoneInput/PhoneInput';
 import './AddClientForm.css';
 
 function AddClientForm() {
-    const authorized = useSelector(state => state.authorized);
-    const clientsList = useSelector(state => state.clientsList);
+    const authorized = useSelector(state => state.login.authorized);
+    const clientsList = useSelector(state => state.clientsList.clientsList);
 
     const [newUserData, setNewUserData] = useState({
       name: 'Anna', 
